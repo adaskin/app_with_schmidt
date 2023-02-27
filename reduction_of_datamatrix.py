@@ -9,7 +9,8 @@ Created on Fri Jan 20 10:00:15 2023
 import numpy as np
 import matplotlib.pyplot as plt
 from sim_tree import generate_tree_elements,sum_of_nonzeropaths
-
+plt.use('PS') 
+plt.rcParams['text.usetex'] = True
 
 n = 10
 N = 2**n
@@ -61,5 +62,6 @@ print("norm of diff:",norm_of_diff)
 ax.text(0.75, 0.75, 'norm of diff={:5.2E}'.format(norm_of_diff), horizontalalignment='center',
      verticalalignment='center', transform=ax.transAxes)
 #print("mean error matrix unnormalized:",np.mean((X_tensor-G)**2))
+
 plt.savefig('{}{}qubits.eps'.format(filename,n ), bbox_inches='tight')
 plt.savefig('{}{}qubits.png'.format(filename,n),bbox_inches='tight')

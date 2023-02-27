@@ -12,7 +12,8 @@ from sim_tree import generate_tree_elements,sum_of_nonzeropaths
 import sklearn.datasets as datasets
 import scipy.sparse
 import scipy.linalg  
-
+plt.use('PS') 
+plt.rcParams['text.usetex'] = True
 
 n = 10
 N = 2**n

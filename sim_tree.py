@@ -324,8 +324,9 @@ if __name__ == "__main__" :
 
     fig, ax = plt.subplots()
     values, bins, bars = ax.hist(listofprobs)
-
-    ax.set_xlabel("probability (coefficient) of the path")
+    plt.use('PS') 
+    plt.rcParams['text.usetex'] = True
+    ax.set_xlabel("Probability (coefficient) of the path")
     ax.set_ylabel("Number of paths")
     ax.set_title('n:{}-qubits '.format(n))
     ax.bar_label(bars, fontsize=9, color='red') """

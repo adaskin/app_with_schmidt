@@ -1,7 +1,6 @@
 
 
 """
-plotting kernel(x,y) = x**2+y**2 vs x, y
 Created on Fri Dec  3 09:10:44 2021
 
 @author: adaskin

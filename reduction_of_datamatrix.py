@@ -9,7 +9,7 @@ Created on Fri Jan 20 10:00:15 2023
 import numpy as np
 import matplotlib.pyplot as plt
 from sim_tree import generate_tree_elements,sum_of_nonzeropaths
-plt.use('PS') 
+
 plt.rcParams['text.usetex'] = True
 
 n = 10

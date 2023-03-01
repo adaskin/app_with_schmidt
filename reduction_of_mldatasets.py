@@ -45,6 +45,7 @@ fig, ax = plt.subplots()
 ax.axvline(threshold, linestyle='--')
 values, bins, bars = ax.hist(L)
 
+ax.ticklabel_format(style='sci',scilimits=(-3,4),axis='both')
 ax.set_xlabel("probability (coefficient) of the path")
 ax.set_ylabel("Number of paths")
 ax.set_title('n: {}-qubits, data: {} '.format(int(np.log2(psi.size)), filename))

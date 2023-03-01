@@ -9,7 +9,7 @@ Created on Fri Jan 20 10:00:15 2023
 import numpy as np
 import matplotlib.pyplot as plt
 from sim_tree import generate_tree_elements,sum_of_nonzeropaths
-plt.use('PS') 
+
 plt.rcParams['text.usetex'] = True
 
 n = 8
@@ -45,7 +45,7 @@ for i in range(int(psi.size/2)-1, psi.size-1):
 fig, ax = plt.subplots()
 ax.axvline(0.03, linestyle='--')
 values, bins, bars = ax.hist(L)
-
+ax.ticklabel_format(style='sci',scilimits=(-3,4),axis='both')
 ax.set_xlabel("probability (coefficient) of the path")
 ax.set_ylabel("Number of paths")
 ax.set_title('n:{}-qubits, distribution:{} '.format(int(np.log2(psi.size)), dist))

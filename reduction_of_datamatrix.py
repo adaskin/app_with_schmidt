@@ -45,8 +45,8 @@ for i in range(int(psi.size/2)-1, psi.size-1):
 fig, ax = plt.subplots()
 ax.axvline(threshold, linestyle='--')
 values, bins, bars = ax.hist(L)
-
-ax.set_xlabel("probability (coefficient) of the path")
+ax.ticklabel_format(style='sci',scilimits=(-3,4),axis='both')
+ax.set_xlabel("Probability (coefficient) of the path")
 ax.set_ylabel("Number of paths")
 ax.set_title('n:{}-qubits, distribution:{} '.format(int(np.log2(psi.size)), dist))
 ax.bar_label(bars, fontsize=9, color='red')
